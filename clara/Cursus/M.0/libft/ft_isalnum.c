@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isalnum(int c)
+{
+	if ((47 < c) & (c < 58) || (64 < c) & (c < 91)
+		|| (96 < c) & (c < 123))
+		return (c);
+	else
+		return (0);
+}
+/*
 #include <stdio.h>
 #include <ctype.h>
 
@@ -19,8 +28,10 @@ int	main(void)
 	int	libft;
 	int	original;
 
-	c = 0;
+	c = 115;
 	libft = ft_isalnum(c);
 	original = isalnum(c);
-	printf("
-}
+	printf("resultado: %d\n", libft);
+	printf("resultado original: %d\n", original);
+	return (0);
+}*/
