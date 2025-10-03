@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 15:34:40 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/03 15:34:42 by clalfons         ###   ########.fr       */
+/*   Created: 2025/10/03 15:10:33 by clalfons          #+#    #+#             */
+/*   Updated: 2025/10/03 15:33:55 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int	ft_strlen(char *s)
 {
-	if ((31 < c) && (c < 127))
-		return (c);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /*
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
 int	main(void)
 {
-	int	c;
-	int	libft;
-	int	original;
+	char	*s = "hola";
+	int		libft;
+	int		original;
 
-	c = 32;
-	libft = ft_isprint(c);
-	original = isprint(c);
+	libft = ft_strlen(s);
+	original = strlen(s);
 	printf("resultado: %d\n", libft);
 	printf("resultado original: %d\n", original);
 	return (0);
