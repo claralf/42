@@ -1,7 +1,7 @@
 #include "libft.h" 
 
 char	*ft_strrchr(const char *s, int c)
- {
+{
 	int	i;
 
 	i = strlen(s);
@@ -12,9 +12,9 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (NULL);
- }
+}
 
- /* #include <string.h>
+/* #include <string.h>
 #include <stdio.h>
 
 int	main(void)

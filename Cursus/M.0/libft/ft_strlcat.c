@@ -21,40 +21,33 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
-	if (size <= dstlen) //size < dstlen
+	if (size <= dstlen)
 	{
-		// while (src[i] != 0)
-		// {
-		// 	dst[dstlen + i] = src[i];
-		// 	i ++;
-		// }
-		// dst[dstlen + i] = '\0';
 		return (size + srclen);
 	}
 	if (size > dstlen)
 	{
-		while ((src[i] != '\0') && (dstlen + i < size - 1)) // size
+		while ((src[i] != '\0') && (dstlen + i < size - 1))
 		{
 			dst[dstlen + i] = src[i];
 			i++;
 		}
-		dst[dstlen + i] = '\0'; // add this shit bombaclara
+		dst[dstlen + i] = '\0';
 		return (dstlen + srclen);
 	}
 	return (dstlen + srclen);
 }
 /*
-	 int	main(void)
-	 {
-	 	char *dest = "oooo partir de aqui";
-	 	char *dest2 = "oooo partir de aqui";
+int	main(void)
+{
+	char *dest = "oooo partir de aqui";
+	char *dest2 = "oooo partir de aqui";
+	int	i = (int)ft_strlcat(dest, "a", 1);
+	int	a = strlcat(dest, "a", 1);
 
-	 	int	i = (int)ft_strlcat(dest, "a", 1);
-	 	int	a = strlcat(dest, "a", 1);
-
-	 	printf("%d\n", i);
-	 	printf("%d\n", a);
-	 	printf("%s\n", dest);
-	 	printf("%s\n", dest2);
-	 	return (0);
-		}*/
+	printf("%d\n", i);
+	printf("%d\n", a);
+	printf("%s\n", dest);
+	printf("%s\n", dest2);
+	return (0);
+}*/
