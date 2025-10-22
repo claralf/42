@@ -6,7 +6,7 @@
 #    By: clalfons <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 16:23:46 by clalfons          #+#    #+#              #
-#    Updated: 2025/10/16 07:45:47 by clalfons         ###   ########.fr        #
+#    Updated: 2025/10/22 18:31:41 by clalfons         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,11 +30,14 @@ SOURCE = ft_isalpha.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c  \
+		ft_atoi.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_memchr.c \
 
 OBJ = $(SOURCE:.c=.o)
 INCLUDE = libft.h
