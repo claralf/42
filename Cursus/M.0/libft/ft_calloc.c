@@ -6,7 +6,7 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:02:27 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/22 20:27:07 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/10/22 21:52:48 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if ((!nmemb) || (!size))
 		return (NULL);
-	ptr = malloc(sizeof(char)*((nmemb*size)));
+	ptr = malloc(sizeof (char) * ((nmemb * size)));
 	return (ptr);
 }
