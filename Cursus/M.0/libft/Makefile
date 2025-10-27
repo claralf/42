@@ -6,7 +6,7 @@
 #    By: clalfons <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 16:23:46 by clalfons          #+#    #+#              #
-#    Updated: 2025/10/22 20:19:22 by clalfons         ###   ########.fr        #
+#    Updated: 2025/10/27 21:59:28 by clalfons         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,9 @@ SOURCE = ft_isalpha.c \
 		ft_atoi.c \
 		ft_calloc.c \
 		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_split.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \

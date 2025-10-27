@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 20:27:38 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/27 21:36:17 by clalfons         ###   ########.fr       */
+/*   Created: 2025/10/22 22:39:08 by clalfons          #+#    #+#             */
+/*   Updated: 2025/10/27 21:46:54 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	find(char *s1, char const *set)
 {
-	char	*subs;
-	int		i;
-	int		count;
+	int	i;
 
 	i = 0;
-	if (ft_strlen(s) <= start)
-		count = 0;
-	else if (len >= (ft_strlen(s) - start))
-		count = ft_strlen(s) - start;
-	else
-		count = len;
-	subs = malloc(sizeof(char) * (count + 1));
-	if (!subs)
-		return (NULL);
-	while (i < count)
+	while (set[i] != s1)
 	{
-		subs[i] = s[start];
+		if (!set[i])
+			return (0);
 		i++;
-		start++;
 	}
-	subs[i] = '\0';
-	return (subs);
-}	
+	return (1);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	len;
+	int	i;
+	int	res;
+
+	len = ft_strlen(s1);
+	i = 0;
+	if (!set)
+		return (s1);
+	while (res == 1)
+	{
+		res = find(s1[i], set);
+		if (res == 0)
+				
+	}
+}
