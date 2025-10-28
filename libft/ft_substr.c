@@ -6,7 +6,7 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:27:38 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/27 21:36:17 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/10/28 18:53:41 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	subs[i] = '\0';
 	return (subs);
-}	
+}
