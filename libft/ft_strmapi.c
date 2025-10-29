@@ -1,10 +1,9 @@
-//#include "libft.h"
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	int	len;
+	unsigned int	i;
+	size_t	len;
 	char	*sol;
 
 	i = 0;
@@ -19,10 +18,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		sol[i] = f(i, s[i]);
 		i++;
 	}
+	sol[i] = '\0';
 	return (sol);
 }
 
-static char	ft_ft(unsigned int i, char c)
+/*static char	ft_ft(unsigned int i, char c)
 {
 	if (i % 2 == 0)
 		return (ft_tolower(c);
@@ -37,4 +37,4 @@ int	main(void)
 	printf("%s\n", s);
 	printf("%s\n", ft_strmapi(s, ft_ft);
 	return (0);
-}
+}*/

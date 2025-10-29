@@ -11,19 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_itoa(int n)
 {
-	char	*stritoa;
+	char	*sol;
 	long int	n2;
 	int	cnt;
 
 	cnt = 0;
 	if (n == 0)
 	{
-		stritoa = ft_strdup("0");
-		return (stritoa); 
+		sol = ft_strdup("0");
+		return (sol); 
 	}
 	if (n < 0)
 	{
@@ -36,23 +35,23 @@ char	*ft_itoa(int n)
 		n2 = n2/10;
 		cnt++;
 	}
-	stritoa = malloc(sizeof(char) * (cnt + 1));
-	if (!stritoa)
+	sol = malloc(sizeof(char) * (cnt + 1));
+	if (!sol)
 		return (NULL);
-	stritoa[cnt] = '\0';
+	sol[cnt] = '\0';
 	while (n != 0)
 	{
-		stritoa[--cnt] = (n%10) + 48;
+		sol[--cnt] = (n%10) + 48;
 		n = (n/10);
 		cnt--;
 	}
-	return (stritoa);
+	return (sol);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	n = -9;
 
 	printf("%s\n", ft_itoa(n));
 	return (0);
-}
+}*/
