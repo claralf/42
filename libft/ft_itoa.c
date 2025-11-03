@@ -6,22 +6,36 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:54:30 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/28 20:10:55 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:34:51 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*char	*ft_itoa(int n)
+{
+	int	cnt;
+
+	cnt = 0;
+	
+	if (n < 0)
+		cnt = 1;
+	while (n / 10 != 0)
+		cnt++;
+	cnt++;
+	
+}*/
+
 char	*ft_itoa(int n)
 {
-	char	*sol;
-	long int	n2;
+	char	*sol = "gola";
+	int	n2;
 	int	cnt;
 
 	cnt = 0;
 	if (n == 0)
 	{
-		sol = ft_strdup("0");
+		//*sol = "0";
 		return (sol); 
 	}
 	if (n < 0)
