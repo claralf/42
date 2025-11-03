@@ -6,7 +6,7 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:39:08 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/27 21:46:54 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/03 20:14:32 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	}
 	sol = malloc(sizeof(char) * (len - i + 1));
+	if (!sol)
+		return (0);
 	return(sol);
 }
