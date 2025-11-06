@@ -28,7 +28,7 @@
 
 char	*ft_itoa(int n)
 {
-	char	*sol = "gola";
+	char	*sol;
 	int	n2;
 	int	cnt;
 

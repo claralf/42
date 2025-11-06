@@ -21,11 +21,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	il = 0;
 	if (!little)
 		return ((char *)big);
-	while ((big[ib]) && ib < len)
+	while (ib < len)
 	{
 		if (big[ib] == little[il])
 		{
-			while ((big[ib + il] == little[il]) && ((ib + il) <= len))
+			while (big[ib + il] == little[il])
 			{
 				if (!little)
 					return ((char *)&big[ib]);
