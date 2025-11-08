@@ -31,17 +31,20 @@ char	*ft_itoa(int n)
 	char	*sol;
 	int	n2;
 	int	cnt;
+	int	flag;
 
 	cnt = 0;
+	flag = 0;
 	if (n == 0)
 	{
-		//*sol = "0";
+		sol = "0";
 		return (sol); 
 	}
 	if (n < 0)
 	{
 		cnt++;
 		n = n * -1;
+		flag = 1;
 	}
 	n2 = n;
 	while (n2 > 0)
@@ -50,6 +53,8 @@ char	*ft_itoa(int n)
 		cnt++;
 	}
 	sol = malloc(sizeof(char) * (cnt + 1));
+	if (flag == 1)
+		sol[0] = '-';
 	if (!sol)
 		return (NULL);
 	sol[cnt] = '\0';
@@ -57,7 +62,6 @@ char	*ft_itoa(int n)
 	{
 		sol[--cnt] = (n%10) + 48;
 		n = (n/10);
-		cnt--;
 	}
 	return (sol);
 }

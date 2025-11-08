@@ -25,7 +25,7 @@ void	ft_free(char **ptr)
 	free(ptr);
 }
 
-int	ft_countwords(char const *s, char c)
+size_t	ft_countwords(char const *s, char c)
 {
 	int	i;
 	int	n;
@@ -34,10 +34,11 @@ int	ft_countwords(char const *s, char c)
 	n = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
-		n++;
-		while (s[i] != c)
+		if (s[i])
+			n++;
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (n);
@@ -57,8 +58,7 @@ char	**ft_split(char const *s, char c)
 	ptr = malloc((ft_countwords(s, c)  + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
-	ptr[ft_countwords(s, c)] = NULL;
-	while (s[i])
+	while (j < ft_countwords(s, c))
 	{
 		while (s[i] && s[i] == c)
 			i++;
@@ -66,10 +66,11 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-			ptr[j] = ft_substr(s, start, i);
+			ptr[j] = ft_substr(s, start, i - start);
 		if (!ptr[j])
 			return (ft_free(ptr), NULL);
 		j++;
 	}
+	ptr[j] = NULL;
 	return (ptr);
 }
