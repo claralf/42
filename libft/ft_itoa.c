@@ -12,23 +12,27 @@
 
 #include "libft.h"
 
-/*char	*ft_itoa(int n)
+char	*ft_sol(char *sol, int cnt, int flag, int n)
 {
-	int	cnt;
+	if (flag == 1)
+		sol[0] = '-';
+	sol[cnt] = '\0';
+	while (n != 0)
+	{
+		sol[--cnt] = (n % 10) + 48;
+		n = (n / 10);
+	}
+	return (sol);
+}
 
-	cnt = 0;
-	
-	if (n < 0)
-		cnt = 1;
-	while (n / 10 != 0)
+int	get_cnt(int n2, int cnt)
+{
+	while (n2 > 0)
+	{
+		n2 = n2 / 10;
 		cnt++;
-	cnt++;
-	
-}*/
-
-char	*sol(int n)
-{
-
+	}
+	return (cnt);
 }
 
 char	*ft_itoa(int n)
@@ -51,25 +55,11 @@ char	*ft_itoa(int n)
 		flag = 1;
 	}
 	n2 = n;
-	while (n2 > 0)
-	{
-		n2 = n2 / 10;
-		cnt++;
-	}
+	cnt = get_cnt(n2, cnt);
 	sol = malloc(sizeof(char) * (cnt + 1));
 	if (!sol)
 		return (NULL);
-	if (flag == 1)
-		sol[0] = '-';
-	if (!sol)
-		return (NULL);
-	sol[cnt] = '\0';
-	while (n != 0)
-	{
-		sol[--cnt] = (n % 10) + 48;
-		n = (n / 10);
-	}
-	return (sol);
+	return (ft_sol(sol, cnt, flag, n));
 }
 
 /*int	main(void)
