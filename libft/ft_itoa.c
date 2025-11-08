@@ -6,7 +6,7 @@
 /*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:54:30 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 07:41:52 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 10:43:32 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,24 @@
 	
 }*/
 
+char	*sol(int n)
+{
+
+}
+
 char	*ft_itoa(int n)
 {
 	char	*sol;
-	int	n2;
-	int	cnt;
-	int	flag;
+	int		n2;
+	int		cnt;
+	int		flag;
 
 	cnt = 0;
 	flag = 0;
 	if (n == -2147483648)
-	{
-		sol = ft_strdup("-2147483648");
-		return (sol);
-	}
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
-	{
-		sol = ft_strdup("0");
-		return (sol); 
-	}
+		return (ft_strdup("0"));
 	if (n < 0)
 	{
 		cnt++;
@@ -54,7 +53,7 @@ char	*ft_itoa(int n)
 	n2 = n;
 	while (n2 > 0)
 	{
-		n2 = n2/10;
+		n2 = n2 / 10;
 		cnt++;
 	}
 	sol = malloc(sizeof(char) * (cnt + 1));
@@ -67,8 +66,8 @@ char	*ft_itoa(int n)
 	sol[cnt] = '\0';
 	while (n != 0)
 	{
-		sol[--cnt] = (n%10) + 48;
-		n = (n/10);
+		sol[--cnt] = (n % 10) + 48;
+		n = (n / 10);
 	}
 	return (sol);
 }
