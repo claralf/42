@@ -6,7 +6,7 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:57:35 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/27 22:05:30 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 02:54:31 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 	size_t	j;
 
-	i = 0;	
+	i = 0;
 	j = 0;
 	if (!s)
 		return (NULL);
-	ptr = malloc((ft_countwords(s, c)  + 1) * sizeof (char *));
+	ptr = malloc((ft_countwords(s, c) + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
 	while (j < ft_countwords(s, c))

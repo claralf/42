@@ -6,7 +6,7 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:48:35 by clalfons          #+#    #+#             */
-/*   Updated: 2025/10/22 21:58:59 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 02:55:12 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*temp;
 
 	i = 0;
