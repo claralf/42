@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:54:30 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/03 19:34:51 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 07:41:52 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,14 @@ char	*ft_itoa(int n)
 
 	cnt = 0;
 	flag = 0;
+	if (n == -2147483648)
+	{
+		sol = ft_strdup("-2147483648");
+		return (sol);
+	}
 	if (n == 0)
 	{
-		sol = "0";
+		sol = ft_strdup("0");
 		return (sol); 
 	}
 	if (n < 0)
@@ -53,6 +58,8 @@ char	*ft_itoa(int n)
 		cnt++;
 	}
 	sol = malloc(sizeof(char) * (cnt + 1));
+	if (!sol)
+		return (NULL);
 	if (flag == 1)
 		sol[0] = '-';
 	if (!sol)

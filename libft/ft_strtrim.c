@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:39:08 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/03 20:14:32 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 07:37:43 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,36 @@ int	find(char s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	len;
-	int	i;
-	int	f;
+	int		len;
+	int		i;
+	int		i2;
 	char	*sol;
 
 	len = ft_strlen(s1);
 	i = 0;
-	f = 1;
-	if (!set)
-		return ((char *)s1);
-	if (!s1)
-		return (NULL);
-	while (f == 1)
-	{
-		f = find(s1[i], set);
-		i++;		
-	}
-	f = 1;
-	while (f == 1)
-	{
-		f = find(s1[len], set);
+	while (s1[i] && find(s1[i], set))
+		i++;
+	while (len > i && find(s1[len - 1], set))
 		len--;
-	}
 	sol = malloc(sizeof(char) * (len - i + 1));
 	if (!sol)
-		return (0);
-	return(sol);
+		return (NULL);
+	i2 = 0;
+	while (i < len)
+	{
+		sol[i2] = s1[i];
+		i++;
+		i2++;
+	}
+	sol[i2] = '\0';
+	return (sol);
 }
+
+// int main(void)
+// {
+// 	char	*s1 = "hjajajajja";
+// 	char	*set = "jah";
+
+// 	printf("%s\n", ft_strtrim(s1, set));
+// 	return 0;
+// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:57:35 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 02:54:31 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/08 07:07:17 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,15 @@ size_t	ft_countwords(char const *s, char c)
 	return (n);
 }
 
-char	**ft_split(char const *s, char c)
+char	**do_split(char const *s, char c)
 {
-	size_t	i;
-	char	**ptr;
 	size_t	start;
+	size_t	i;
 	size_t	j;
+	char	**ptr;
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
 	ptr = malloc((ft_countwords(s, c) + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
@@ -74,3 +72,29 @@ char	**ft_split(char const *s, char c)
 	ptr[j] = NULL;
 	return (ptr);
 }
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ptr;
+
+	if (!s)
+		return (NULL);
+	ptr = do_split(s, c);
+	return (ptr);
+}
+
+// int main(void)
+// {
+// 	char *s = "hola quee tal estamos";
+// 	char	c = ' ';
+
+// 	char  **hola = ft_split(s, c);
+// 	int	i = 0;
+// 	while (hola[i])
+// 	{
+// 		printf("%s\n", hola[i]);
+// 		i++;
+// 	}
+// 	ft_free(hola);
+// 	return 0;
+// }
