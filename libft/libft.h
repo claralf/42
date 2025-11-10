@@ -6,22 +6,16 @@
 /*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:58:40 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 02:57:27 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:57:56 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/* Ponemos librerías que queremos incluidas*/
-
-# include <stdio.h> //Aparentemente estas las borramos antes de entregar
-# include <ctype.h>
-# include <string.h>
-# include <strings.h> //Maybe not>
-# include <unistd.h>
-# include <stdlib.h> //Malloc
-# include <stddef.h> //size_t
+# include <stdio.h>
+# include <unistd.h> //Write
+# include <stdlib.h> //Malloc, size_t
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
