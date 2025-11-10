@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 23:25:23 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 06:27:31 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:26:15 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

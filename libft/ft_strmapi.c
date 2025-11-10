@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 02:51:38 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 02:51:48 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:30:12 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	sol[i] = '\0';
 	return (sol);
 }
-
-/*static char	ft_ft(unsigned int i, char c)
-{
-	if (i % 2 == 0)
-		return (ft_tolower(c);
-	return (ft_toupper(c);
-
-}
-
+/*
 int	main(void)
 {
 	char 	*s = "hola";

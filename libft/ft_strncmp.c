@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 07:12:40 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/03 17:53:04 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:48:57 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 /*
-#include <stdio.h>
-#include <string.h>
-
 int	main(void)
 {
 	char	*s1 = "test\200";	

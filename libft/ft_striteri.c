@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 02:52:17 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 02:58:37 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:32:40 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 /*
-void	*ft_ft(unsigned int i, char *s)
-{
-	
-}
-
 int	main(void)
 {
 	char	*s = "hola";

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:39:08 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 07:37:43 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:11:15 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (sol);
 }
 
-// int main(void)
-// {
-// 	char	*s1 = "hjajajajja";
-// 	char	*set = "jah";
+/* int main(void)
+{
+	char	*s1 = "hjajajajja";
+	char	*set = "jah";
 
-// 	printf("%s\n", ft_strtrim(s1, set));
-// 	return 0;
-// }
+	printf("%s\n", ft_strtrim(s1, set));
+	return 0;
+}*/

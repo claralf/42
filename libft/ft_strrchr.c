@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:50:17 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 02:41:11 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 18:46:33 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// /*
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char	*s = "teste";
-// 	printf("%s\n", ft_strrchr(s, '\0'));
-// 	printf("%s\n", strrchr(s, '\0'));
-// }*/
+/*
+int	main(void)
+{
+	char	*s = "teste";
+	printf("%s\n", ft_strrchr(s, '\0'));
+	printf("%s\n", strrchr(s, '\0'));
+}*/

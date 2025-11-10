@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:54:30 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 10:43:32 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:28:20 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

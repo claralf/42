@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:57:35 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/08 07:07:17 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 19:41:20 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,19 +82,19 @@ char	**ft_split(char const *s, char c)
 	ptr = do_split(s, c);
 	return (ptr);
 }
+/*
+int	main(void)
+{
+	char *s = "hola quee tal estamos";
+	char	c = ' ';
 
-// int main(void)
-// {
-// 	char *s = "hola quee tal estamos";
-// 	char	c = ' ';
-
-// 	char  **hola = ft_split(s, c);
-// 	int	i = 0;
-// 	while (hola[i])
-// 	{
-// 		printf("%s\n", hola[i]);
-// 		i++;
-// 	}
-// 	ft_free(hola);
-// 	return 0;
-// }
+	char  **hola = ft_split(s, c);
+	int	i = 0;
+	while (hola[i])
+	{
+		printf("%s\n", hola[i]);
+		i++;
+	}
+	ft_free(hola);
+	return 0;
+}*/
