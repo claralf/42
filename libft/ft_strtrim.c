@@ -6,13 +6,13 @@
 /*   By: clalfons <clalfons@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:39:08 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/10 20:15:21 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:27:00 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_find(char s1, char const *set)
+static int	ft_find(char s1, char const *set)
 {
 	int	i;
 

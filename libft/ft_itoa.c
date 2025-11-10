@@ -6,13 +6,13 @@
 /*   By: clalfons <clalfons@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:54:30 by clalfons          #+#    #+#             */
-/*   Updated: 2025/11/10 19:28:20 by clalfons         ###   ########.fr       */
+/*   Updated: 2025/11/10 20:25:42 by clalfons         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_sol(char *sol, int cnt, int flag, int n)
+static char	*ft_sol(char *sol, int cnt, int flag, int n)
 {
 	if (flag == 1)
 		sol[0] = '-';
@@ -25,7 +25,7 @@ char	*ft_sol(char *sol, int cnt, int flag, int n)
 	return (sol);
 }
 
-int	get_cnt(int n2, int cnt)
+static int	get_cnt(int n2, int cnt)
 {
 	while (n2 > 0)
 	{
