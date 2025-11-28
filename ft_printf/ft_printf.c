@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-int	ftype(char type, char *s)
+int	ftype(char type, va_list *args)
 {
 	if (type == '%')
-		return(ft_putchar_fd());
+		return(ft_putchar_fd("%", 1));
 	else if (type == 'c')
-		return(ft_putchar_fd());
+		return(ft_putchar_fd(type, 1));
 	else if (type == 's')
-		return(ft_putstr_fd());
+		return(ft_putstr_fd(va_arg(args, char *), 1));
 	else if (type == 'd' || type == 'i')
-		return(ft_putnbr_fd());
+		return(ft_putnbr_fd(va_arg(args, int), 1));
 	else if (type == 'x')
-		return(ft_putnbr_base_fd());
+		return(ft_putnbr_base_fd(va_arg(args, unsigned long), 1));
 	else if (type == 'X')
-		return(ft_putnbr_base_fd());
+		return(ft_putnbr_base_fd(va_arg(args, unsigned long), 1));
 	else if (type == 'u')
-		return(ft_putnbr_base_fd());
+		return(ft_putnbr_base_fd(va_arg(args, unsigned long), 1));
 	else if (type == 'p')
-		return(ft_putnbr_base_fd());
+		return(ft_putnbr_base_fd(va_arg(args, unsigned long), 1));
 }
 int ft_printf(const char *s, ...)
 {
@@ -34,7 +34,7 @@ int ft_printf(const char *s, ...)
 		if (s[i] == '%' && s[i+1] != 0)
 		{
 			i++;
-			cnt = cnt + ftype(s[i]);	
+			cnt = cnt + ftype(s[i], args);	
 		}
 		else
 		{
