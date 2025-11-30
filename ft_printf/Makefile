@@ -3,25 +3,26 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: luferna3 <luferna@student.42.fr>          +#+  +:+       +#+         #
+#    By: clalfons <clalfons@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/01 16:23:46 by clalfons          #+#    #+#              #
-#    Updated: 2025/11/11 04:01:54 by luferna3         ###   ########.fr        #
+#    Updated: 2025/11/11 04:01:54 by clalfons         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
-SOURCE = ft_printf.c
+SOURCE = ft_printf.c \
+	fts.c \
 
-LIBFT_DIR = $(SRC_DIR)libft
-LIBFT = $(LIBFT_DIR)/libft.a
+\\LIBFT_DIR = $(SRC_DIR)libft
+\\LIBFT = $(LIBFT_DIR)/libft.a
 OBJ = $(SOURCE:.c=.o)
-INCLUDE = libft.h
+INCLUDE = ft_printf.h
 RM = @rm -f
 
-all: $(LIBFT) $(NAME)
+all: $(LIBFT)  $(NAME)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
