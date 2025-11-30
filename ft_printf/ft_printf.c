@@ -17,7 +17,7 @@ int	ftype(char type, va_list args)
 	if (type == '%')
 		return (ft_putchar_fd('%', 1));
 	else if (type == 'c')
-		return (ft_putchar_fd((char)type, 1));
+		return (ft_putchar_fd(va_arg(args, int), 1));
 	else if (type == 's')
 		return (ft_putstr_fd(va_arg(args, char *), 1));
 	else if (type == 'd' || type == 'i')
