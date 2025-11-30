@@ -16,32 +16,22 @@ NAME = libftprintf.a
 SOURCE = ft_printf.c \
 	fts.c \
 
-\\LIBFT_DIR = $(SRC_DIR)libft
-\\LIBFT = $(LIBFT_DIR)/libft.a
 OBJ = $(SOURCE:.c=.o)
-INCLUDE = ft_printf.h
 RM = @rm -f
 
-all: $(LIBFT)  $(NAME)
+all: $(NAME)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ) $(LIBFT)
-	@echo "\033[32mprintf compilada con exito"
-
-$(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
-	@echo "\033[32mlibft compilada con exito"
-
+	@ar rcs $(NAME) $(OBJ)
+	@echo "\033[32mprintf compilada con éxito"
 
 clean:
-	$(MAKE) -C $(LIBFT_DIR) clean
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(MAKE) -C $(LIBFT_DIR) fclean
 	$(RM) $(NAME)
 
 re: fclean all
