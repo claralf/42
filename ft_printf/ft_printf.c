@@ -23,19 +23,19 @@ int	ftype(char type, va_list args)
 	else if (type == 'd' || type == 'i')
 		return (ft_putnbr_fd(va_arg(args, int), 1));
 	else if (type == 'x')
-		return (ft_putnbr_base_fd(va_arg(args, unsigned long),
+		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
 				"0123456789abcdef", 1));
 	else if (type == 'X')
-		return (ft_putnbr_base_fd(va_arg(args, unsigned long),
+		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
 				"0123456789ABCDEF", 1));
 	else if (type == 'u')
-		return (ft_putnbr_base_fd(va_arg(args, unsigned long),
+		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
 				"0123456789", 1));
 	else if (type == 'p')
 	{		
 		write(1, "0x", 2);
-		return ((ft_putnbr_base_fd(va_arg(args, unsigned long),
-					"0123456789abcdef", 1) + 2));
+		return (ft_putnbr_base_fd((unsigned long long)va_arg(args, void *),
+					"0123456789abcdef", 1) + 2);
 	}
 	return (-1);
 }
