@@ -32,7 +32,7 @@ int	ftype(char type, va_list args)
 		return (ft_putnbr_base_fd(va_arg(args, unsigned long),
 				"0123456789", 1));
 	else if (type == 'p')
-	{
+	{		
 		write(1, "0x", 2);
 		return ((ft_putnbr_base_fd(va_arg(args, unsigned long),
 					"0123456789abcdef", 1) + 2));

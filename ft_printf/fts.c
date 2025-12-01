@@ -71,7 +71,7 @@ int	ft_putnbr_base_fd(unsigned long n, char *base, int fd)
 	int	cnt;
 
 	cnt = 0;
-	if (n > 9)
+	if (n >= (unsigned long)ft_strlen(base))
 		cnt = cnt + ft_putnbr_fd((n / ft_strlen(base)), fd);
 	cnt = cnt + ft_putchar_fd((n % ft_strlen(base)) + 48, fd);
 	return (cnt);
