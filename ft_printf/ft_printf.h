@@ -19,6 +19,7 @@
 
 int	ft_printf(const char *s, ...);
 int	ftype(char type, va_list args);
+int	ftype2(char type, va_list args);
 int	ft_strlen(const char *s);
 int	ft_putchar_fd(char c, int fd);
 int	ft_putstr_fd(char *s, int fd);

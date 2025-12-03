@@ -12,8 +12,33 @@
 
 #include "ft_printf.h"
 
+int	ftype2(char type, va_list args)
+{
+	unsigned long	ptr;
+
+	ptr = 0;
+	if (type == 'X')
+		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
+				"0123456789ABCDEF", 1));
+	else if (type == 'u')
+		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
+				"0123456789", 1));
+	else if (type == 'p')
+	{
+		ptr = va_arg(args, unsigned long);
+		if (ptr == 0)
+			return (ft_putstr_fd("0x0", 1));
+		write(1, "0x", 2);
+		return (ft_putnbr_base_fd(ptr,
+				"0123456789abcdef", 1) + 2);
+	}
+	return (-1);
+}
+
 int	ftype(char type, va_list args)
 {
+	int	digit;
+
 	if (type == '%')
 		return (ft_putchar_fd('%', 1));
 	else if (type == 'c')
@@ -21,22 +46,16 @@ int	ftype(char type, va_list args)
 	else if (type == 's')
 		return (ft_putstr_fd(va_arg(args, char *), 1));
 	else if (type == 'd' || type == 'i')
-		return (ft_putnbr_fd(va_arg(args, int), 1));
+	{
+		digit = va_arg(args, int);
+		if ((-2147483648 <= digit) && (digit <= 2147483647))
+			return (ft_putnbr_fd(digit, 1));
+	}
 	else if (type == 'x')
 		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
 				"0123456789abcdef", 1));
-	else if (type == 'X')
-		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
-				"0123456789ABCDEF", 1));
-	else if (type == 'u')
-		return (ft_putnbr_base_fd((unsigned int)va_arg(args, unsigned int),
-				"0123456789", 1));
-	else if (type == 'p')
-	{		
-		write(1, "0x", 2);
-		return (ft_putnbr_base_fd((unsigned long long)va_arg(args, void *),
-					"0123456789abcdef", 1) + 2);
-	}
+	else
+		return (ftype2(type, args));
 	return (-1);
 }
 
@@ -66,14 +85,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (cnt);
 }
-
-/*int	main(void)
-{
-	int	hola = -19999999;
-	char	*hola2 = "hahahahahahhahaha :)";
-	int	*hola3 = &hola;
-	int	hola4 = -4;
-
-	printf("%d\n%i\n%s\n %% %p %u hola clara", hola, hola, hola2, hola3, hola4);
-	return (0);
-}*/
