@@ -32,7 +32,11 @@ int	ftype2(char type, va_list args)
 		return (ft_putnbr_base_fd(ptr,
 				"0123456789abcdef", 1) + 2);
 	}
-	return (-1);
+	else
+	{
+		va_arg(args, unsigned int);
+		return (0);
+	}
 }
 
 int	ftype(char type, va_list args)
